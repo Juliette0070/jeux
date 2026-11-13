@@ -1,3 +1,14 @@
 spring:
   application:
     name: jeux
+  datasource:
+    url: jdbc:mariadb://localhost:3306/jeux
+    username: root
+    password: root
+    driver-class-name: or.mariadb.jdbc.Driver
+  jpa:
+    properties:
+      hibernate.dialect: org.hibernate.dialect.ariaDBDialect
+    show-sql: true
+  config:
+    import: "optional:file:.env[.yml]"
